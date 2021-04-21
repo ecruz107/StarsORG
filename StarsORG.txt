@@ -1,0 +1,7 @@
+INSERT [dbo].[MEMBER] ([PID], [FName], [LName], [MI], [Email], [Phone], [PhotoPath]) VALUES (N'1234567', N'Will', N'Smith', N'C', N'WillSmith@Celebs.com', N'1231231234', N'C:\Users\Elvis\Documents\VSFIUNEW\STARSORG\STARSORG\Resources\will-smith-9542165-1-402.jpg' )
+
+INSERT [dbo].[MEMBER] ([PID], [FName], [LName], [MI], [Email], [Phone], [PhotoPath]) VALUES (N'5839503', N'Daniel', N'Craig', N'W', N'DanielCraig@celebs.com', N '2732834953',  N'C:\Users\Elvis\Documents\VSFIUNEW\STARSORG\STARSORG\Resources\Daniel_Craig.jpg' )
+
+INSERT [dbo].[MEMBER] ([PID], [FName], [LName], [MI], [Email], [Phone], [PhotoPath]) VALUES (N'7823321', N'Jennifer', N'Aniston', N'J', N'JenniferAniston@Celebs.com', N'8234932304', N'C:\Users\Elvis\Documents\VSFIUNEW\STARSORG\STARSORG\Resources\https _specials-images.forbesimg.com_imageserve_558c719ce4b05c2c343158d9_0x0.jpg fit=scale&background=000000.jpg' )
+
+INSERT [dbo].[MEMBER] ([PID], [FName], [LName], [MI], [Email], [Phone], [PhotoPath]) VALUES (N'4637283', N'Jennifer', N'Lawrence', N'S', N'JenniferLawrence@Celebs.com', N'3748573927', N'C:\Users\Elvis\Documents\VSFIUNEW\STARSORG\STARSORG\Resources\MV5BOTU3NDE5MDQ4MV5BMl5BanBnXkFtZTgwMzE5ODQ3MDI@._V1_UY1200_CR61,0,630,1200_AL_.jpg' )

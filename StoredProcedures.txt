@@ -1,0 +1,72 @@
+sp_getMemberByLName
+CREATE PROCEDURE [dbo].sp_getMemberByPID
+	@lName nvarchar(75) 
+	
+AS
+	SELECT * FROM MEMBER
+	WHERE LName = @lName
+RETURN 0
+
+sp_CheckMemberPIDExists
+CREATE PROCEDURE [dbo].sp_CheckMemberPIDExists
+	@pid nvarchar(7),
+	@recCount int = 0 OUTPUT
+AS
+	BEGIN
+	SET @recCount = (Select count(0) FROM MEMBER WHERE PID = @pid)
+	SELECT @recCount as RecordCount
+	END
+RETURN 0
+
+sp_saveMember
+CREATE PROCEDURE [dbo].sp_saveMember
+	@pid nvarchar(7),
+    @fName nvarchar(50),
+	@lName nvarchar(75),
+	@mi nvarchar(1),
+	@email nvarchar(50),
+	@phone nvarchar(13),
+	@photoPath nvarChar(300)
+
+
+AS
+	Declare @countExists int
+	SELECT @countExists = count(0) FROM MEMBER WHERE @pid = PID
+	IF (@countExists = 0)
+	BEGIN
+	INSERT INTO [dbo].MEMBER
+	(
+	PID
+	, FName,
+	LName,
+	MI,
+	Email,
+	Phone,
+	PhotoPath
+	)
+	VALUES 
+	(
+	@pid, 
+	@fName,
+	@lName,
+	@mi,
+	@email,
+	@phone,
+	@photoPath
+
+	)
+	END 
+	ELSE 
+	BEGIN
+	UPDATE [dbo].MEMBER
+	SET
+	[FName] = @fName,
+	[LName] = @lName,
+	[MI] = @mi,
+	[Email] = @email,
+	[Phone] = @phone,
+	[PhotoPath] = @photoPath
+	WHERE PID = @pid
+	END
+
+RETURN @@error
