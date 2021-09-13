@@ -246,4 +246,5 @@ Public Class frmRole
 
 
     End Sub
+
 End Class

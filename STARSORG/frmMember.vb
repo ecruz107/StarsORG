@@ -215,7 +215,7 @@ Public Class frmMember
             grpMembers.Enabled = False
             grpEdit.Enabled = True
             txtPID.Focus()
-            objMembers.currentObject.isNewMember = False
+            objMembers.CreateNewMember()
         Else
             grpMembers.Enabled = True
             grpEdit.Enabled = False
